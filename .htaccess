@@ -1,0 +1,31 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^src/(.+)$ /src/$1 [L,NC]
+
+  RewriteCond %{REQUEST_FILENAME} !-f [OR]
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule (.*) web/$1 [L,NC]
+  
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+
+  RewriteRule ^(.*)$ user?u=$1 [QSA,L]
+  RewriteRule ^(.*)$ merchant?u=$1 [QSA,L]
+
+</IfModule>
+
+# Protect .htaccess file
+<Files ~"^.*\.([Hh][Tt][Aa])">
+  order allow,deny
+  deny from all
+  satisfy all
+</Files>

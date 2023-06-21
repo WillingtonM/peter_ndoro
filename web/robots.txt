@@ -1,0 +1,3 @@
+Sitemap: http://www.tda.tralon.co.za/sitemap.xml
+User-agent: *
+Disallow:
