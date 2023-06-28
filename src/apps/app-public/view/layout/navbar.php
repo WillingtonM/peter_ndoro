@@ -20,12 +20,12 @@
 
             <a class="navbar-brand log-card d-none d-sm-block" href="home">
               <img id="navbar-brand-img" class="bg-white/" style="border-radius: 50%" src="<?= PROJECT_LOGO ?>" height="30" loading="lazy" alt="<?= PROJECT_TITLE ?>">
-              <span class="name_ref name_card_alt font-weight-bolder text-uppercase text-white"> <?= PROJECT_TITLE ?> </span>
+              <span class="name_ref name_card_alt font-weight-bolder text-uppercase text-white" style="font-family: logo_font"> <?= PROJECT_TITLE ?> </span>
             </a>
 
             <a class="navbar-brand log-card d-block d-sm-none" href="home">
               <img id="navbar-brand-img" class="bg-white/" style="border-radius: 50%" src="<?= PROJECT_LOGO ?>" height="30" loading="lazy" alt="<?= PROJECT_TITLE ?>">
-              <span class="font-weight-bolder text-uppercase text-white"> <?= PROJECT_TITLE ?> </span>
+              <span class="font-weight-bolder text-uppercase text-white" style="font-family: logo_font"></span> <?= PROJECT_TITLE ?> </span>
             </a>
 
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,9 +41,12 @@
                   <a class="nav-link text-uppercase font-weight-bolder <?= ((isset($page) && $page == "home") ? 'active nav_text_left' : '') ?>" href="home"> Home </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-uppercase font-weight-bolder <?= ((isset($page) && $page == "about") ? 'active nav_text_left' : '') ?>" href="about"> About</a>
+                  <a class="nav-link text-uppercase font-weight-bolder <?= ((isset($page) && $page == "about") ? 'active nav_text_left' : '') ?>" href="about"> About </a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
+                  <a class="nav-link text-uppercase font-weight-bolder <?= ((isset($page) && $page == "services") ? 'active nav_text_left' : '') ?>" href="services"> Services </a>
+                </li>
+                <!-- <li class="nav-item dropdown">
                   <a class="nav-link text-uppercase font-weight-bolder dropdown-toggle <?= ((isset($page) && $page == "services") ? 'active nav_text_left' : '') ?>" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Services
                   </a>
@@ -103,7 +106,7 @@
                     </div>
                   </div>
 
-                </li>
+                </li> -->
                 <li class="nav-item dropdown">
                   <a class="nav-link text-uppercase font-weight-bolder dropdown-toggle <?= ((isset($page) && $page == "media") ? 'active nav_text_left' : '') ?>" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Media

@@ -6,7 +6,7 @@
 
             <div class="p-0">
                 <div class="text-center p-3 pt-5">
-                    <h3 class="text-white font-weight-bolder"> <i class="me-2">About</i> <span class="text-warning"><?= PROJECT_TITLE ?></span> </h3>
+                    <h3 class="text-white font-weight-bolder"> <i class="me-2">About</i> <span class="text-danger/" style="color: #999"></span><?= PROJECT_TITLE ?></span> </h3>
                     <small class="m-0 text-light px-3">
 
                         Peter Ndoro is a prominent media personality with a diverse background and extensive experience in broadcasting. <br>
@@ -38,12 +38,12 @@
                                 </div>
                                 <div class="p-3">
                                     <p class="card-text/ text-light">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        As a Conference Speaker, Peter Ndoro brings a wealth of knowledge and insights gained from his extensive experience in the media industry. 
+                                        With his engaging speaking style, Peter delivers impactful presentations that resonate with audiences. 
+                                        He can cover a wide range of topics, including media and broadcasting, entrepreneurship, leadership, motivation, and personal development. 
+                                        Peter Ndoro's eloquence and ability to connect with diverse audiences make him a sought-after conference speaker.
                                     </p>
-                                    <a href="journalist" class="btn btn-sm btn-secondary" style="padding: 3px 15px;; border-radius: 12px;">More info</a>
+                                    <!-- <a href="journalist" class="btn btn-sm btn-secondary" style="padding: 3px 15px;; border-radius: 12px;">More info</a> -->
                                 </div>
                             </div>
 
@@ -58,12 +58,12 @@
                                 </div>
                                 <div class="p-3">
                                     <p class="card-text/ text-white">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        Peter Ndoro's expertise as a Moderator adds value to panel discussions, debates, and conferences. 
+                                        With his sharp interviewing skills and ability to steer discussions, Peter ensures a balanced and meaningful exchange of ideas among participants. 
+                                        His neutral and unbiased approach creates an inclusive environment, encouraging diverse perspectives to be heard. 
+                                        Peter Ndoro's experience as a news anchor and his in-depth understanding of various subjects make him an excellent choice as a moderator for your next event.
                                     </p>
-                                    <a href="moderator" class="btn btn-sm btn-secondary" style="padding: 3px 15px;; border-radius: 12px;">More info</a>
+                                    <!-- <a href="moderator" class="btn btn-sm btn-secondary" style="padding: 3px 15px;; border-radius: 12px;">More info</a> -->
                                 </div>
                             </div>
 
@@ -78,13 +78,12 @@
                                 </div>
                                 <div class="p-3">
                                     <p class="card-text/ text-light">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        Peter Ndoro's exceptional skills as a Master of Ceremonies make him the perfect choice to host your event. 
+                                        With his captivating presence, wit, and ability to connect with the audience, Peter sets the tone and keeps the energy alive throughout the program. 
+                                        From corporate galas to award ceremonies, product launches, and fundraisers, Peter Ndoro's expertise as an MC guarantees a seamless and engaging event.
                                     </p>
                                     <br>
-                                    <a href="mc" class="btn btn-sm btn-secondary" style="padding: 3px 15px;; border-radius: 12px;"> More info </a>
+                                    <!-- <a href="mc" class="btn btn-sm btn-secondary" style="padding: 3px 15px;; border-radius: 12px;"> More info </a> -->
                                 </div>
                             </div>
 

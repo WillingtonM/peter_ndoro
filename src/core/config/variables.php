@@ -174,7 +174,7 @@ $services_navba      = array(
     'wait'  => '1',
   ),
   'mc' => array(
-    'short' => 'MC',
+    'short' => 'MC | <small> <i class="text-xm">Master of Ceremonies</i> </small>',
     'long'  => 'MC | <small> <i class="text-xm">Master of Ceremonies</i> </small>',
     'imgs'  => 'fa-solid fa-microphone-lines',
     'type'  => 'font',

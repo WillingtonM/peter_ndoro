@@ -1,14 +1,7 @@
 <div class="col p-3 border-radius-xl mb-2 text-center">
-    <p>
-        <span class="font-weight-bolder"> Lorem ipsum dolor sit amet </span>
-    </p>
-
     <p class="text-sm">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-    </p>
-    <p class="text-sm">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+        Peter Ndoro's exceptional skills as a Master of Ceremonies make him the perfect choice to host your event. 
+        With his captivating presence, wit, and ability to connect with the audience, Peter sets the tone and keeps the energy alive throughout the program. 
+        From corporate galas to award ceremonies, product launches, and fundraisers, Peter Ndoro's expertise as an MC guarantees a seamless and engaging event.
     </p>
 </div>
