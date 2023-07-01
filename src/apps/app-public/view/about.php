@@ -5,7 +5,7 @@
         <span class="mask opacity-6/" style="background-color: rgb(41, 55, 75, .5);">
 
             <div class="p-0">
-                <div class="text-center p-3 pt-5">
+                <div class="text-center px-3 pt-5">
                     <h3 class="text-white font-weight-bolder"> <i class="me-2">About</i> <span class="text-danger/" style="color: #999"></span><?= PROJECT_TITLE ?></span> </h3>
                     <small class="m-0 text-light px-3">
 

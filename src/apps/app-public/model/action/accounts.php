@@ -797,12 +797,12 @@ if(isset($_POST)) {
 
         // Prepare to send email *************************************************
         $to_usrs    = array(
-          "name"    => $full_name,
-          "email"   => $booking_email
+          "name"      => $full_name,
+          "email"     => $booking_email
         );
 
         $subject      = "Booking Recieved";
-        $html         =  event_notification($client_ifo);
+        $html         =  event_notification($client_ifo, $to_usrs);
 
         if ($mailer->mail(array($to_usrs), $subject, $html, MAIL_FROM)) {
           $subject    = "New Booking";
@@ -811,47 +811,23 @@ if(isset($_POST)) {
           $client_ifo['message_text_1'] = 'You have a new online booking from '. PROJECT_TITLE .' website';
           $client_ifo['message_text_2'] = 'Here are the details,';
 
-          if (isset($admin_emails) && !empty($admin_emails)) {
-            foreach ($admin_emails as $key => $mail_user) {
-              // $client_ifo['name']   = $mail_user['name'];
-              // $client_ifo['email']  = $mail_user['mail'];
-
-              $to_usrs = array(
-                "name"    => $mail_user['name'],
-                "email"   => $mail_user['mail'],
-              );
-
-              $html       = event_notification($client_ifo);
-              
-              if (isset($mailer)) {
-                $mailer->mail->clearAllRecipients();
-              }
-              if ($mailer->mail(array($to_usrs), $subject, $html, MAIL_FROM)) {
-                $data['success'] = true;
-              }
-              
-            }
-          } else {
-            $to_usrs   = array(
-              "name"    => $_ENV['MAIL_USER'],
-              "email"   => $_ENV['MAIL_MAIL'],
+          foreach ($admin_emails as $key => $mail_user) {
+            $to_usrs = array(
+              "name"      => $mail_user['name'],
+              "email"     => $mail_user['mail'],
             );
 
-            // $client_ifo['name']   = $_ENV['MAIL_USER'];
-            // $client_ifo['email']  = $_ENV['MAIL_USER'];
-
-            $html       = event_notification($client_ifo);
-
+            $html         = event_notification($client_ifo, $to_usrs);
+            
             if (isset($mailer)) {
               $mailer->mail->clearAllRecipients();
             }
             if ($mailer->mail(array($to_usrs), $subject, $html, MAIL_FROM)) {
               $data['success'] = true;
             }
-
           }
 
-          $message    = (!empty($event_id)) ? 'updated' : 'created';
+          $message          = (!empty($event_id)) ? 'updated' : 'created';
   
           $data['success']  = true;
           

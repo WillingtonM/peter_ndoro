@@ -12,20 +12,12 @@ $article_array      = array('article' => 'Authored publications', 'blog' => 'Blo
 $media_array        = array('appearance' => 'Media Appearances', 'gallery' => 'Gallery', 'file' => 'Files');
 
 $admin_emails = array(
-  'admin' => array(
+  'admin'   => array(
     'name'  => $_ENV['MAIL_USER'],
     'mail'  => $_ENV['MAIL_MAIL'],
   ),
-  'fifi' => array(
-    'name'  => 'Fifi Peters',
-    'mail'  => 'bookings@misspeters.com',
-  ),
-  'alt' => array(
-    'name'  => 'Admin',
-    'mail'  => 'admin@misspeters.com',
-  ),
-'will' => array(
-    'name'  => 'Admin',
+  'will'    => array(
+    'name'  => 'Willington Mhlanga',
     'mail'  => 'will.mhlanga@tralon.co.za',
   ),
 );

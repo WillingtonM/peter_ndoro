@@ -14,8 +14,8 @@
           <p>
             <span class="text-white" style="font-family: logo_font; font-size: 3.6em;"> <?= strtoupper(PROJECT_TITLE) ?> </span>
           </p>
-          <p>
-            <span class="text-white fs-5" size="font-size: 3.7em !important;"> MC | MODERATOR | CONFERENCE SPEAKER </span> <br>
+          <p class="mb-2">
+            <span class="text-white text-white home_service" size="font-size: 3.6em !important;"> MODERATOR &nbsp; <span class="me-1" style="font-size: 1rem;"> &middot; </span> &nbsp; CONFERENCE SPEAKER &nbsp; <span class="me-1" style="font-size: 1rem;"> &middot; </span> &nbsp;  MC </span> <br>
           </p>
           <hr class="horizontal light mt-1 mb-0">
           
@@ -75,8 +75,8 @@
                   <p>
                     <span class="text-white" style="font-family: logo_font; font-size: 3.6em;"> <?= strtoupper(PROJECT_TITLE) ?> </span>
                   </p>
-                  <p>
-                    <span class="text-white fs-5" size="font-size: 3.7em !important;"> MC | MODERATOR | CONFERENCE SPEAKER </span> <br>
+                  <p class="mb-2">
+                    <span class="text-white text-white home_service" size="font-size: 3.6em !important;"> MODERATOR &nbsp; <span class="me-1" style="font-size: 1rem;"> &middot; </span> &nbsp; CONFERENCE SPEAKER &nbsp; <span class="me-1" style="font-size: 1rem;"> &middot; </span> &nbsp;  MC </span> <br>
                   </p>
                   <hr class="horizontal light mt-1 mb-0">
                   

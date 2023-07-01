@@ -2,7 +2,7 @@
     <div class="page-header min-height-300 border-radius-xl/ mt-4 wait-2s" data-animation="animated pulse" style="border-radius: 35px;">
         <span class="mask opacity-6" style="background-color: rgb(31, 40, 57, .5); ">
             <div class="p-0">
-                <div class="text-center py-3 pt-5">
+                <div class="text-center px-3 pt-5">
                     <h3 class="font-weight-bolder text-white"> <span class="me-2"> Contact </span> </h3>
                     <small class="m-0 text-light font-weight-bold">
                         To book Peter Ndoro for your next event or to inquire about his availability and rates, <br> please contact us using the information provided below.

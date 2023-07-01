@@ -422,6 +422,11 @@ h5 {
     font-size: .5em !important;
   }
 
+  .home_service {
+    /* font-size: .7em !important; */
+    /* font-size: 12px !important; */
+  }
+
   #about_content {
     padding-top: 15px !important;
   }
@@ -483,7 +488,7 @@ h5 {
 
   #top_logo_text_carsl span,
   #top_logo_text span {
-    font-size: 2.4rem !important;
+    /* font-size: 2.4rem !important; */
   }
 
   #top_logo_text_carsl h3,

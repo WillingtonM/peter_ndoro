@@ -178,7 +178,7 @@ function event_notification($data, $altdata = array())
                 <tr style="padding: 5px;">
                   <td style="width: 225.4pt;padding: 0cm 5.4pt;vertical-align: top;">
                     <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>
-                      <span style="font-size: 14.0pt; line-height: 107%;">Hello <?= ((isset($data['name']) && !empty($data['name'])) ? ' ' . $data['name'] : ((isset($data['last_name']) && !empty($data['last_name']))? $data['last_name']: '')) ?>,</span>
+                      <span style="font-size: 14.0pt; line-height: 107%;">Hello <?= ((isset($altdata['name']) && !empty($altdata['name'])) ? ' ' . $altdata['name'] : '') ?>,</span>
                     </p>
                     <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
                     <?php if (isset($data['message_text_1']) && !empty($data['message_text_1'])) : ?>
@@ -918,4 +918,3 @@ function main_general_mail($data = array())
 
   return $mail;
 }
-

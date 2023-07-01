@@ -19,13 +19,17 @@
           <div class="container-fluid position-relative">
 
             <a class="navbar-brand log-card d-none d-sm-block" href="home">
-              <img id="navbar-brand-img" class="bg-white/" style="border-radius: 50%" src="<?= PROJECT_LOGO ?>" height="30" loading="lazy" alt="<?= PROJECT_TITLE ?>">
+              <img id="navbar-brand-img" class="bg-white p-1/" style="border-radius: 50%; padding: 3px" src="<?= PROJECT_LOGO ?>" height="30" loading="lazy" alt="<?= PROJECT_TITLE ?>">
+              <?php if ($page != "home"): ?>
               <span class="name_ref name_card_alt font-weight-bolder text-uppercase text-white" style="font-family: logo_font"> <?= PROJECT_TITLE ?> </span>
+              <?php endif; ?>
             </a>
 
             <a class="navbar-brand log-card d-block d-sm-none" href="home">
-              <img id="navbar-brand-img" class="bg-white/" style="border-radius: 50%" src="<?= PROJECT_LOGO ?>" height="30" loading="lazy" alt="<?= PROJECT_TITLE ?>">
+              <img id="navbar-brand-img" class="bg-white p-1/" style="border-radius: 50%; padding: 3px" src="<?= PROJECT_LOGO ?>" height="30" loading="lazy" alt="<?= PROJECT_TITLE ?>">
+              <?php if ($page != "home"): ?>
               <span class="font-weight-bolder text-uppercase text-white" style="font-family: logo_font"></span> <?= PROJECT_TITLE ?> </span>
+              <?php endif; ?>
             </a>
 
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,6 +41,9 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navigation">
               <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class=""> &nbsp; </a>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link text-uppercase font-weight-bolder <?= ((isset($page) && $page == "home") ? 'active nav_text_left' : '') ?>" href="home"> Home </a>
                 </li>
