@@ -302,7 +302,6 @@ function get_subscriber_by_email($subscription_email)
   return ($req_res = prep_exec($req_sql, $req_dta, $sql_request_data[0])) ? $req_res : null;
 }
 
-
 function get_subscribers()
 {
   global $sql_request_data, $email_key;
@@ -328,6 +327,25 @@ function get_feedback()
   global $sql_request_data;
 
   $req_sql = "SELECT * FROM feedback WHERE feedback_status = 1 ORDER BY feedback_date_created DESC";
+  $req_dta = [];
+  return ($req_res = prep_exec($req_sql, $req_dta, $sql_request_data[1])) ? $req_res : null;
+}
+
+// testimonial ***********************************************************************************
+function get_testimonial_by_id($id)
+{
+  global $sql_request_data, $email_key;
+
+  $req_sql = "SELECT * FROM testimonials WHERE testimonial_id = ? LIMIT 1";
+  $req_dta = [$id];
+  return ($req_res = prep_exec($req_sql, $req_dta, $sql_request_data[0])) ? $req_res : null;
+}
+
+function get_testimonials()
+{
+  global $sql_request_data;
+
+  $req_sql = "SELECT * FROM testimonials WHERE testimonial_status = 1 ORDER BY testimonial_date_created DESC";
   $req_dta = [];
   return ($req_res = prep_exec($req_sql, $req_dta, $sql_request_data[1])) ? $req_res : null;
 }

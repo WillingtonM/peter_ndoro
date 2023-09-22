@@ -81,16 +81,17 @@ $config = [
 
 // Frofile Path Directories
 // define('IMG_PATH',          $config['MEDIA_PATH'] . 'img' .DS);
-define('IMG_PATH',          $config['MEDIA_PATH']);
-define('HOME_URL',          IMG_PATH . 'home' .DS);
+define('IMG_PATH',          $config['IMG_PATH']);
+define('MEDIA_PATH',        $config['MEDIA_PATH']);
 define('USER_PROFILE_URL',  IMG_PATH . 'users' .DS);
-define('ARTICLES_URL',      IMG_PATH . 'articles' . DS);
-define('MEDIA_URL',         IMG_PATH . 'media' .DS);
-define('TMP_URL',           IMG_PATH . 'tmp' .DS);
+define('HOME_URL',          MEDIA_PATH . 'home' .DS);
+define('ARTICLES_URL',      MEDIA_PATH . 'articles' . DS);
+define('MEDIA_URL',         MEDIA_PATH . 'media' .DS);
+define('TMP_URL',           MEDIA_PATH . 'tmp' .DS);
+define('CLIENTS_DIR',       MEDIA_PATH . 'clients' . DS);
 define('DEFAULT_IMG_PATH',  'img' .DS);
 
 // Media
-define('MEDIA_PATH',         $config['MEDIA_PATH']);
 define('MEDIA_TMP',          $config['MEDIA_PATH']) . 'tmp' . DS;
 
 define('GALLERY_URL',        MEDIA_PATH . 'gallery' .DS);
@@ -104,6 +105,8 @@ define('ABS_OTHER',           'img' . DS . 'other' . DS);
 define('ABS_MEDIA',           'img' . DS . 'media' . DS);
 define('ABS_ARTICLES',        'img' . DS . 'articles' .DS);
 define('ABS_TMP',             'img' . DS . 'tmp' .DS);
+define('ABS_SERVICE',         'img' . DS . 'services' . DS);
+define('ABS_CLIENTS',         'img' . DS . 'clients' . DS);
 define('ABS_GALLERY',         'mediacontent' . DS . 'gallery' .DS);
 define('ABS_FILES',           'mediacontent' . DS . 'files' . DS);
 define('ABS_VIDEOS' ,         'mediacontent' . DS . 'videos' . DS);

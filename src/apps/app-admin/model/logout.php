@@ -5,4 +5,4 @@ if (isset($_GET['back']) && $_GET['back']) {
   session_destroy();
 }
 
-redirect_to('home');
+redirect_to('home'); 

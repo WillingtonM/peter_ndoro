@@ -150,6 +150,9 @@ function postCheck(htmlid, data) {
   var check_hash = htmlid.startsWith('#') ? true : false;
   var check_dots = htmlid.startsWith('.') ? true : false;
   var html_id_elem = check_hash || check_dots ? $(htmlid) : $('#' + htmlid);
+  console.log(data);
+  console.log(html_id_elem);
+  console.log(url_val);
   return function (data) {
     var ret = false,
         alt_at_id = '';
@@ -158,6 +161,8 @@ function postCheck(htmlid, data) {
       'get_type': post_type[0],
       'token': token
     }, data);
+    
+    console.log(data);
     $.ajax({
       url: path_action,
       method: "POST",

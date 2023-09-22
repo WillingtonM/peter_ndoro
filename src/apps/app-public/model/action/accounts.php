@@ -9,7 +9,7 @@ if(isset($_POST)) {
 
   $emailkey = constant("EMAIL_KEY");
 
-   // feedback form
+  // feedback form
   if (isset($_POST['form_type']) &&  $_POST['form_type'] == 'feedback_form') {
     $name       = (isset($_POST['name'])) ? $_POST['name'] : '';
     $last_name  = (isset($_POST['last_name'])) ? $_POST['last_name'] : '';
@@ -39,9 +39,9 @@ if(isset($_POST)) {
     }
 
     if (empty($data['error'])) {
-      $Feedbacks_sql = "INSERT INTO feedback (feedback_name, feedback_last_name, feedback_email, feedback_message) VALUES (?, ?, ?, ?)";
-      $Feedbacks_dta = [$name, $last_name, $email, $message];
-      $Feedbacks_qry = prep_exec($Feedbacks_sql, $Feedbacks_dta, $sql_request_data[2]);
+      $Feedbacks_sql    = "INSERT INTO feedback (feedback_name, feedback_last_name, feedback_email, feedback_message) VALUES (?, ?, ?, ?)";
+      $Feedbacks_dta    = [$name, $last_name, $email, $message];
+      $Feedbacks_qry    = prep_exec($Feedbacks_sql, $Feedbacks_dta, $sql_request_data[2]);
 
       if ($Feedbacks_qry) {
 

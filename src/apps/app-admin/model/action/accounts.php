@@ -131,7 +131,9 @@ if(isset($_POST)) {
         $message          = (!empty($media_id)) ? 'updated' : 'published';
         $data['success']  = true;
         $data['message']  = "Your media content hab been " . $message;
-        // $data['url']      = "refresh";
+        $data['delayed']  = true;
+        $data['seconds']  = 7000;
+        $data['url']      = "refresh";
       } else {
         $data['error']    = true;
         $data['message']  = "There was an error on updating your media content";
@@ -148,10 +150,12 @@ if(isset($_POST)) {
       $req_dta = [$media_id];
       if (prep_exec($req_sql, $req_dta, $sql_request_data[2])) {
         $data['url'] = "refresh";
+        $data['delayed'] = true;
+        $data['seconds'] = 7000;
         $data['success'] = true;
         $data['message'] = "Media has been removed";
       } else {
-        $data['error'] = true;
+        $data['error']   = true;
         $data['message'] = "Something went wrong, and your media is not removed";
       }
     }
@@ -184,7 +188,6 @@ if(isset($_POST)) {
     $hour              = (isset($_POST['hour']))? $_POST['hour']:'';
     
     $cronjob_date      = (!empty($dob) && !empty($mob) && !empty($yob))? date("Y-m-d H:i:s", strtotime($yob . '/' . $mob . '/' . $dob . ' ' . $hour . ':0:0')):'';
-
 
     if (!empty($article_post)) {
       // $article_post = json_encode($article_post);
@@ -1385,6 +1388,75 @@ if(isset($_POST)) {
       } else {
         $data['error']   = true;
         $data['message'] = 'Your request was not submitted';
+      }
+
+    }
+  }
+
+  // feedback form
+  if (isset($_POST['form_type']) &&  $_POST['form_type'] == 'testimonials') {
+    $testimonial_id = (isset($_POST['testimonial_id'])) ? $_POST['testimonial_id'] : '';
+    $name       = (isset($_POST['name'])) ? $_POST['name'] : '';
+    $last_name  = (isset($_POST['last_name'])) ? $_POST['last_name'] : '';
+    $message    = (isset($_POST['message'])) ? $_POST['message'] : '';
+    $email      = (isset($_POST['email'])) ? $_POST['email'] : '';
+    $full_name  = $name . ' ' . $last_name;
+
+    if (!$data['error'] && empty($name)) {
+      $data['error']    = true;
+      $data['message']  = "Please provide name";
+    }
+
+    if (!$data['error'] && empty($last_name)) {
+      $data['error']    = true;
+      $data['message']  = "Please provide last name";
+    }
+
+    if (!$data['error'] && empty($message)) {
+      $data['error']    = true;
+      $data['message']  = "Please write your message";
+    }
+
+    $testimonial  = get_testimonial_by_id($testimonial_id);
+    $img_dir      = USER_PROFILE_URL;
+    $tmp_dir      = $img_dir . 'tmp' . DS;
+
+    $tmp_glb      = glob($tmp_dir . '*');
+
+    if (count($tmp_glb) !== 0) {
+      foreach ($tmp_glb as $tmp_file) {
+        $img_exp  = explode(DS, $tmp_file);
+        $img_name = end($img_exp);
+        $new_file = $img_dir . $img_name;
+      }
+    } elseif($testimonial) {
+      $img_name   = $testimonial[''];
+    }
+    
+    if (empty($data['error'])) {
+      $media_image          = (!empty($img_name)) ? $img_name : 'profile.png';
+
+      if (!empty($testimonial_id)) {
+        $testimonials_sql   = "UPDATE testimonials SET testimonial_name = ?, testimonial_last_name = ?, testimonial_email = ?, testimonial_message = ?, testimonial_image = ? WHERE testimonial_id = ?";
+        $testimonials_dta   = [$name, $last_name, $email, $message, $media_image, $testimonial_id];
+      } else {
+        $testimonials_sql   = "INSERT INTO testimonials (testimonial_name, testimonial_last_name, testimonial_email, testimonial_message, testimonial_image) VALUES (?, ?, ?, ?, ?)";
+        $testimonials_dta   = [$name, $last_name, $email, $message, $media_image];
+      }
+
+      if (prep_exec($testimonials_sql, $testimonials_dta, $sql_request_data[2])) {
+        $testimonial_id     = (empty($testimonial_id)) ? $connect->lastInsertId() : $testimonial_id;
+
+        if (count($tmp_glb) !== 0) {
+          rename($tmp_file, $new_file);
+        }
+
+        $data['url']        = "refresh";
+        $data['success']    = true;
+        $data['message']    = "Testimonial has been succesfully updated";
+      } else {
+        $data['error']      = true;
+        $data['message']    = 'Your message was not sent';
       }
 
     }

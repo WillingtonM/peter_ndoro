@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-12 mb-4">
                     <div class="row">
-                        <?= global_imgs($img_dir, 'col-md-3', 12, 'sqaure', $value['media_image'], $value['media_id']) ?>
+                        <?= global_imgs($img_dir, 'col-md-3', 12, 'square', $value['media_image'], $value['media_id']) ?>
                     </div>
                 </div>
             </div>

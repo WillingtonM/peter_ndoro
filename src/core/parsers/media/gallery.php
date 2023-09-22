@@ -1,6 +1,6 @@
 <?php if (isset($_SESSION['admin_id'])) : ?>
     <div class="col-12 pt-3 px-1">
-        <button type="button" class="btn btn-sm btn-secondary shadow-none article_nav article_active border-radius-lg" onclick="requestModal(post_modal[4], 'galleryModal', {'type':'gallery'})"> <span class=""> <i class="fas fa-media-plus me-2"></i> Upload Gallery </span> </button>
+        <button type="button" class="btn btn-sm btn-secondary shadow-none border-radius-lg" onclick="requestModal(post_modal[4], 'galleryModal', {'type':'gallery'})"> <span class=""> <i class="fas fa-media-plus me-2"></i> Upload Gallery </span> </button>
     </div>
 <?php endif; ?>
 

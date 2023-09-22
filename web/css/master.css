@@ -1983,6 +1983,46 @@ iframe {
   background-attachment: fixed;
 }
 
+.container-moderator {
+  background-image: url('../img/home/moderator.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.container-journalist {
+  background-image: url('../img/home/main.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.container-events {
+  background-image: url('../img/home/events.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.container-trainer {
+  background-image: url('../img/home/speaker.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.container-speaker {
+  background-image: url('../img/home/speaker.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
 .abt_header {
   color: white !important;
   text-shadow: 1px 1px 2px #1f2839,

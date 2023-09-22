@@ -12,10 +12,13 @@
 			<div class="form-row mb-3 px-2">
 				<div class="col-12" id="gender">
 					<label for="gender" class="text-secondary">Gallery type</label> <br>
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="media_type" id="gallery_type1" value="gallery" <?= (((isset($media_res['media_type']) && $media_res['media_type'] == 'gallery') || ($type == 'gallery')) ? 'checked' : '') ?>>
-						<label class="form-check-label" for="gallery_type1">Gallery Moderator</label>
-					</div>
+					<?php foreach ($service_list as $service_key => $opt_val) : ?>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="media_type" id="gallery_<?= $service_key ?>" value="gallery-<?= $service_key ?>" <?= (((isset($media_res['media_type']) && $media_res['media_type'] == 'gallery') || ($type == 'gallery')) ? 'checked' : '') ?>>
+							<label class="form-check-label" for="gallery_<?= $service_key ?>">Gallery <?= ucfirst($service_key) ?></label>
+						</div>
+					<?php endforeach; ?>
+
 				</div>
 			</div>
 

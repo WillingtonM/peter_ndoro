@@ -20,7 +20,7 @@ function addclass_from_page($page, $var_compare, $css_class) {
   return ($page == $var_compare)?$css_class:'';
 }
 
-function img_path($img_path, $img_name, $type=0 /* options : [0=original image, 1=sqaure image]*/) {
+function img_path($img_path, $img_name, $type=0 /* options : [0=original image, 1=square image]*/) {
   global $image_modify_paths;
 
   $path_end = (endsWith($img_path, '/') || endsWith($img_path, DS)) ? '' : DS;

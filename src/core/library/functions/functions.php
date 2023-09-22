@@ -584,7 +584,7 @@ function img_thumbnail($image_path,$o_path,$url){
 	return $dir;
 }
 
-function img_path($img_path, $img_name, $type=0 /* options : [0=original image, 1=sqaure image]*/) {
+function img_path($img_path, $img_name, $type=0 /* options : [0=original image, 1=square image]*/) {
   global $image_modify_paths;
   
   $path_end = (endsWith($img_path, '/') || endsWith($img_path, DS)) ? '' : DS;
@@ -640,7 +640,7 @@ function global_imgs($dir_url, $img_class = 'col-md-3', $limit = 4, $view = fals
         $output   .= '<div class="w-100 position-absolute"><a type="button" class="float-end text-light p-3" style="-webkit-text-stroke: .01em #333; z-index: 100"><span class="me-2">' . $count + 1 . '/' . $global_count . ' </span><i class="fa-solid fa-images fs-4"></i></a></div>';
         $output   .= '<img src="' . $img_path . '"class="col-12 img-responsive carousel_img_container" data-value="' . $media_id . '" path="' . $img_path . '" image="' . $img_ends . '">';
         $output   .= '</div>';
-      } elseif ($view == 'sqaure') {
+      } elseif ($view == 'square') {
 
         $last_pos = strripos($img_path, DS);
         $rev  = strrev($img_path);
@@ -656,7 +656,7 @@ function global_imgs($dir_url, $img_class = 'col-md-3', $limit = 4, $view = fals
 
         $output     .= '<div id="' . $img_name . '" class="' . $img_name . ' ' . $img_class . ' img_mult" align="center" '.$media_value.'><img style="border-radius: 15px !important; padding: 0;" src="' . img_path($path, $img_ends, 1) . '"class="img-thumbnail w-100"></div>';
       } elseif ($view == true) {
-        $output     .= '<div id="' . $img_name . '" class="' . $img_name . ' ' . $img_class . ' img_mult" align="center" '.$media_value.'><img style="border-radius: 15px !important; padding: 0;" src="' . $img_path . '"class="img-thumbnail" path="' . $img_path . '" image="' . $img_ends . '"></div>';
+        $output     .= '<div id="' . $img_name . '" class="' . $img_name . ' ' . $img_class . ' img_mult" align="center" ' . $media_value . '><img style="border-radius: 15px !important; padding: 0;" src="' . $img_path . '"class="img-thumbnail" path="' . $img_path . '" image="' . $img_ends . '"></div>';
       } else {
         $output     .= '<div id="' . $img_name . '" class="' . $img_name . ' ' . $img_class . ' img_mult" align="center" ' . $media_value . '><img style="border-radius: 15px !important; padding: 0;" src="' . $img_path . '"class="img-thumbnail" path="' . $img_path . '" image="' . $img_ends . '"><a type="button" data-path="' . $img_path . '" id="img_' . $img_name . '" class="img_del_btn btn-sm close">&times</a></div>';
       }

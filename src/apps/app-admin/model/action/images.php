@@ -33,7 +33,7 @@ if (isset($_POST)) :
             $data['error']    = $image_res['success'];
         }
 
-        $data['message']  = (empty($data['message'])) ? $image_res['message'] : $data['message'];
+        $data['message']      = (empty($data['message'])) ? $image_res['message'] : $data['message'];
     }
 
 

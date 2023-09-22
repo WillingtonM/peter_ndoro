@@ -139,6 +139,27 @@ PRIMARY KEY (`feedback_id`)
 
 
 -- ***************************************************;
+-- DROP TABLE IF EXISTS `testimonials`;
+
+-- ************************************** `testimonials`
+
+CREATE TABLE IF NOT EXISTS `testimonials`
+(
+ `testimonial_id`           bigint NOT NULL AUTO_INCREMENT ,
+ `testimonial_name`         varchar(255) NOT NULL ,
+ `testimonial_last_name`    varchar(255) NOT NULL ,
+ `testimonial_image`        varchar(255) NOT NULL DEFAULT 'profile.png',
+ `testimonial_email`        varchar(255) NOT NULL ,
+ `testimonial_message`      text NOT NULL ,
+ `testimonial_status`       tinyint NOT NULL DEFAULT 1,
+ `testimonial_date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+ `testimonial_date_updated` timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
+
+PRIMARY KEY (`testimonial_id`)
+);
+
+
+-- ***************************************************;
 -- DROP TABLE IF EXISTS `pages_content`;
 
 -- ************************************** `pages_content`
@@ -160,20 +181,20 @@ PRIMARY KEY (`feedback_id`)
 
 -- ************************************** `email_subscription`
 
--- CREATE TABLE IF NOT EXISTS `email_subscription`
--- (
---  `subscription_id`           bigint NOT NULL AUTO_INCREMENT ,
---  `subscription_name`         varchar(255) NULL ,
---  `subscription_last_name`    varchar(255) NULL ,
---  `subscription_email`        varchar(255) NOT NULL ,
---  `subscription_token`        varchar(255),
---  `subscription_date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ,
---  `subscription_date_updated` timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
---  `subscription_edit`         tinyint NOT NULL DEFAULT 0 , 
---  `subscription_status`       tinyint NOT NULL DEFAULT 1 ,
+CREATE TABLE IF NOT EXISTS `email_subscription`
+(
+ `subscription_id`           bigint NOT NULL AUTO_INCREMENT ,
+ `subscription_name`         varchar(255) NULL ,
+ `subscription_last_name`    varchar(255) NULL ,
+ `subscription_email`        varchar(255) NOT NULL ,
+ `subscription_token`        varchar(255),
+ `subscription_date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+ `subscription_date_updated` timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
+ `subscription_edit`         tinyint NOT NULL DEFAULT 0 , 
+ `subscription_status`       tinyint NOT NULL DEFAULT 1 ,
 
--- PRIMARY KEY (`subscription_id`)
--- );
+PRIMARY KEY (`subscription_id`)
+);
 
 
 
@@ -270,6 +291,7 @@ CREATE TABLE IF NOT EXISTS `media`
  `media_title`        varchar(255) NOT NULL ,
  `media_content`      text NOT NULL ,
  `media_type`         varchar(255) NULL ,
+ `media_file_type`    varchar(255) NULL ,
  `media_url`          varchar(255) NULL ,
  `media_image`        varchar(255) NULL ,
  `media_status`       tinyint NOT NULL DEFAULT 1 ,

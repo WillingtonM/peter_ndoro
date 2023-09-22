@@ -113,13 +113,11 @@
                     <?php if (isset($_SESSION['user_id']) && isset($event_type) && $key != $event_type) continue ?>
 
                     <form class="<?= $b_form_pne ?> tab-pane fade <?= (((isset($event_type) && $event_type == $key) || (!isset($event_type) && $array_count == 1)) ? 'show active' : '') ?>" id="pills-<?= $key ?>" role="tabpanel" aria-labelledby="pills-<?= $key ?>-tab">
-
                         <div class="row notif_content">
                             <div class="col-12 shadow bg-white border-radius-xl p-3">
                                 <?php require_once $config['PARSERS_PATH'] . 'bookings' . DS . $key . '.php' ?>
                             </div>
                         </div>
-
                     </form>
 
                 <?php endforeach; ?>

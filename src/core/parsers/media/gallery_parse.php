@@ -18,7 +18,6 @@
             </div>
         <?php else : ?>
             <div class="w-100 pt-1 border-top border-light">
-
                 <p class="m-0 p-0 hide_text_on_length">
                     <a href="gallery?p=<?= $value['media_image'] ?>&uid=<?= $value['media_id'] ?>" class="font-weight-bolder text-dark w-100 p-0 px-2 m-0">
                         <span class="font-weight-bolder text-dark hide_text_on_length/ p-0"> <?= $value['media_title'] ?> </span>

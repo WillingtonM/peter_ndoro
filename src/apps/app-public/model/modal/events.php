@@ -1,6 +1,6 @@
 <?php
 
-$event_type         = (isset($_POST['type']) && key_exists($_POST['type'], $services_navba)) ? $_POST['type'] : $services_navba[0]['short'];
+$event_type         = (isset($_POST['type']) && key_exists($_POST['type'], $booking_navba)) ? $_POST['type'] : 'moderator';
 
 // modal variables
 $modal_id           = 'events';

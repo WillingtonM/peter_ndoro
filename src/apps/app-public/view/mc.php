@@ -26,7 +26,7 @@
                         <div class="frst_crsl_<?= $count ?> carousel-item/ <?= (($count == 1) ? 'active' : '') ?>" style="">
                             <div id="member_<?= $value['media_id'] ?>" style="border-bottom/: 1px solid #ddd;" class="li_media">
                                 <div class="row mc_img">
-                                    <?= global_imgs($img_dir, 'col-md-2', 6, 'sqaure', $value['media_image'], $value['media_id']) ?>
+                                    <?= global_imgs($img_dir, 'col-md-2', 6, 'square', $value['media_image'], $value['media_id']) ?>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +73,7 @@
                                         <div class="frst_crsl_<?= $count ?> carousel-item/ <?= (($count == 1) ? 'active' : '') ?>" style="">
                                             <div id="member_<?= $value['media_id'] ?>" style="border-bottom/: 1px solid #ddd;" class="li_media">
                                                 <div class="row mc_img">
-                                                    <?= global_imgs($img_dir, 'col-md-2', 6, 'sqaure', $value['media_image'], $value['media_id']) ?>
+                                                    <?= global_imgs($img_dir, 'col-md-2', 6, 'square', $value['media_image'], $value['media_id']) ?>
                                                 </div>
                                             </div>
                                         </div>

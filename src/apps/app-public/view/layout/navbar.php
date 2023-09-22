@@ -50,10 +50,10 @@
                 <li class="nav-item">
                   <a class="nav-link text-uppercase font-weight-bolder <?= ((isset($page) && $page == "about") ? 'active nav_text_left' : '') ?>" href="about"> About </a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link text-uppercase font-weight-bolder <?= ((isset($page) && $page == "services") ? 'active nav_text_left' : '') ?>" href="services"> Services </a>
-                </li>
-                <!-- <li class="nav-item dropdown">
+                </li> -->
+                <li class="nav-item dropdown">
                   <a class="nav-link text-uppercase font-weight-bolder dropdown-toggle <?= ((isset($page) && $page == "services") ? 'active nav_text_left' : '') ?>" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Services
                   </a>
@@ -63,15 +63,15 @@
 
                     <div class="row">
                       <div class="col-12 col-md-6">
-                        <?php foreach ($services_navba as $nav_key => $nav_val) : ?>
+                        <?php foreach ($service_panel as $nav_key => $nav_val) : ?>
                           <?php $count++; ?>
-                          <a class="w-100 px-2" href="services?tab=<?= $nav_key ?>">
+                          <a class="w-100 px-2" href="<?= $nav_val['page'] ?>">
                             <div class="d-flex align-items-center">
                               <div class="flex-shrink-0">
                                 <?php if ($nav_key == 'podcast') : ?>
-                                  <span class="ps-1 pe-1/"><i class="<?= $nav_val['imgs'] ?> fa-2x text-white"></i></span> 
+                                  <span class="ps-1 pe-1/"><i class="<?= $nav_val['font'] ?> fa-2x text-white"></i></span> 
                                 <?php else: ?>
-                                  <i class="<?= $nav_val['imgs'] ?> fa-2x"></i>
+                                  <i class="<?= $nav_val['font'] ?> fa-2x"></i>
                                 <?php endif; ?>
                               </div>
                               <div class="flex-grow-1 ms-3">
@@ -87,16 +87,16 @@
 
                       <?php $count = 0; ?>
                       <div class="col-12 col-md-6">
-                        <?php foreach ($services_navba as $nav_key => $nav_val) : ?>
+                        <?php foreach ($service_panel  as $nav_key => $nav_val) : ?>
                           <?php $count++; ?>
                           <?php if ($count <= $count_limit) continue; ?>
-                          <a class="w-100 px-2" href="services?tab=<?= $nav_key ?>">
+                          <a class="w-100 px-2" href="<?= $nav_val['page'] ?>">
                             <div class="d-flex align-items-center">
                               <div class="flex-shrink-0">
                                 <?php if ($nav_key == 'podcast') : ?>
-                                  <span class="ps-1 pe-1/"><i class="<?= $nav_val['imgs'] ?> fa-2x text-white"></i></span> 
+                                  <span class="ps-1 pe-1/"><i class="<?= $nav_val['font'] ?> fa-2x text-white"></i></span> 
                                 <?php else: ?>
-                                  <i class="<?= $nav_val['imgs'] ?> fa-2x"></i>
+                                  <i class="<?= $nav_val['font'] ?> fa-2x"></i>
                                 <?php endif; ?>
                               </div>
                               <div class="flex-grow-1 ms-3">
@@ -113,7 +113,7 @@
                     </div>
                   </div>
 
-                </li> -->
+                </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link text-uppercase font-weight-bolder dropdown-toggle <?= ((isset($page) && $page == "media") ? 'active nav_text_left' : '') ?>" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Media

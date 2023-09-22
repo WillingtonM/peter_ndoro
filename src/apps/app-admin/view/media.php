@@ -31,7 +31,7 @@
 
               <div class="col-12 p-3">
 
-                <div class="card/ mb-4" style="background: none">
+                <div class="mb-4" style="background: none">
 
                   <div class="col-12" id="user_messages"></div>
                   <?php require $config['PARSERS_PATH'] . 'media' . DS . 'media_action.php' ?>

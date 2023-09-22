@@ -61,10 +61,10 @@
 
               <?php if (is_array($nwsf_qry) || is_object($nwsf_qry)) : ?>
                 <?php foreach ($nwsf_qry as $key => $value) : ?>
-                <?php
-                  $artcl_date  = DateTime::createFromFormat('Y-m-d H:i:s', $value['article_publish_date']);
-                  $cnt_res     = get_article_visits_count($value['article_id']);
-                ?>
+                  <?php
+                    $artcl_date  = DateTime::createFromFormat('Y-m-d H:i:s', $value['article_publish_date']);
+                    $cnt_res     = get_article_visits_count($value['article_id']);
+                  ?>
                   <div class="col-12 col-sm-6 col-md-4 col-lg-3/ article_container" style="padding: 5px !important;">
                     <div class="media_div article_contents artclt_bg<?= $array_count ?>" style="padding: 17px 5px; border-radius: 25px; ">
                       <a class="text-center col-12" style="padding: 0;" href="article?article=<?= $slugify->slugify($value['article_title']) ?>&slgid=<?= $value['article_id'] ?>&type=<?= $value['article_type'] ?>">

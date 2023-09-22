@@ -7,7 +7,7 @@ var action_path = 'action/view/home?=';
 var token = $('#token').val();
 var post_type = ['action', 'modal'];
 var post_urls = ['accounts', 'messages', 'images', 'files'];
-var post_modal = ['login', 'media', 'article', 'academics', 'gallery', 'files', 'imgmodal', 'article_view', 'subscription', 'events', 'users', 'members', 'file_upload', 'service', 'modal_alert', 'video', 'appearance']; // var post_modal        = ['login','media','article', 'academics', 'gallery', 'files', 'imgmodal', 'article_view'];
+var post_modal = ['login', 'media', 'article', 'academics', 'gallery', 'files', 'imgmodal', 'article_view', 'subscription', 'events', 'users', 'members', 'file_upload', 'service', 'modal_alert', 'video', 'appearance', 'testimonials']; // var post_modal        = ['login','media','article', 'academics', 'gallery', 'files', 'imgmodal', 'article_view'];
 
 var path_action = 'action/';
 var path_modal = 'modal/';

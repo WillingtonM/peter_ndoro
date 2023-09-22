@@ -1,6 +1,6 @@
 <?php if (isset($_SESSION['user_id'])) : ?>
     <div class="w-100 pt-3 px-1">
-        <button type="button" class="btn btn-sm btn-secondary shadow-none article_nav article_active" onclick="requestModal(post_modal[1], 'mediaModal', {'type':'appearance'})"> <span class=""> <i class="fas fa-media-plus me-2"></i> Upload Media Appearance</span> </button>
+        <button type="button" class="btn btn-sm btn-secondary shadow-none border-radius-lg" onclick="requestModal(post_modal[1], 'mediaModal', {'type':'appearance'})"> <span class=""> <i class="fas fa-media-plus me-2"></i> Upload Media Appearance</span> </button>
     </div>
 <?php endif; ?>
 <!-- <hr> -->
